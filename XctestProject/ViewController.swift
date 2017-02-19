@@ -14,12 +14,22 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func isNumberEven(num: Int) -> Bool {
+        if num%2 == 0 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    
+    func getLessonCoinAmount(coursePrice: Int) -> Int? {
+        let lessonRewardCoinAmtPercentage = 1
+        let decimal = Double(lessonRewardCoinAmtPercentage) / 100.0
+        return Int(Double(coursePrice) * decimal)
+        
+    }
+    
     }
 
-
-}
 
